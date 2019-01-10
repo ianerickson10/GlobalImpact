@@ -25,7 +25,7 @@ class ImpactViewController: UIViewController
         let impactLocation = CLLocationCoordinate2D(latitude: 35.6895, longitude: 139.6917)
         let mapSpan = MKCoordinateSpan(latitudeDelta: 10.05, longitudeDelta: 10.05)
         let impactRegion = MKCoordinateRegion(center: impactLocation, span: mapSpan)
-        map.animatedZoom(zoomRegion: impactRegion, duration: 5)
+        map.animatedZoom(zoomRegion: impactRegion, duration: 2)
     }
 
 }
