@@ -30,3 +30,11 @@ class ImpactViewController: UIViewController
 
 }
 
+extension MKMapView
+{
+    public func animatedZoom(zoomRegion:MKCoordinateRegion, duration:TimeInterval)
+    {
+        MKMapView.animated(withDuration: duration, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 10, options: UIView.AnimationOptions.curveEaseIn, aniamtions:
+            {self.setRegion(zoomRegion, animated: true) }, completion: nil)
+    }
+}
