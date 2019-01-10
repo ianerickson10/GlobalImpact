@@ -22,10 +22,10 @@ class ImpactViewController: UIViewController
 
     @IBAction func Button(_ sender: UIButton)
     {
-        let impactLocation = CLLocationCoordinate2D(latitude: 35.6895, logitude: 139.6917)
-        let mapSpan = MKCoordinateSpan(lattitudeDelta: 10.05, longitudeDelta: 10.05)
-        let impactRegion = MKCoordinateRegion(Center: impactLocation, span: mapSpan)
-        mapView.animatedZoom(zoomRegion: impactRegion, duration: 5)
+        let impactLocation = CLLocationCoordinate2D(latitude: 35.6895, longitude: 139.6917)
+        let mapSpan = MKCoordinateSpan(latitudeDelta: 10.05, longitudeDelta: 10.05)
+        let impactRegion = MKCoordinateRegion(center: impactLocation, span: mapSpan)
+        map.animatedZoom(zoomRegion: impactRegion, duration: 5)
     }
 
 }
@@ -34,7 +34,7 @@ extension MKMapView
 {
     public func animatedZoom(zoomRegion:MKCoordinateRegion, duration:TimeInterval)
     {
-        MKMapView.animated(withDuration: duration, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 10, options: UIView.AnimationOptions.curveEaseIn, aniamtions:
+        MKMapView.animate(withDuration: duration, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 10, options: UIView.AnimationOptions.curveEaseIn, animations:
             {self.setRegion(zoomRegion, animated: true) }, completion: nil)
     }
 }
