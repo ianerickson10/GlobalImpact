@@ -10,38 +10,58 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Impact View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GlobalImpact" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ImpactViewController" customModule="GlobalImpact" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sFE-uj-4jF">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sFE-uj-4jF">
                                 <rect key="frame" x="0.0" y="20" width="375" height="271"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5oR-ab-FS0">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5oR-ab-FS0">
                                 <rect key="frame" x="0.0" y="299" width="375" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iTd-5C-6eh"/>
+                                </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="srR-Hm-zkK">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="srR-Hm-zkK">
                                 <rect key="frame" x="0.0" y="337" width="375" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="cIb-kF-tpS"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3b-3e-n4A">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3b-3e-n4A" customClass="i">
                                 <rect key="frame" x="0.0" y="473" width="375" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sFE-uj-4jF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6jk-k4-LI4"/>
+                            <constraint firstItem="srR-Hm-zkK" firstAttribute="top" secondItem="5oR-ab-FS0" secondAttribute="bottom" constant="8" symbolic="YES" id="9vO-1p-2OK"/>
+                            <constraint firstItem="i3b-3e-n4A" firstAttribute="top" secondItem="srR-Hm-zkK" secondAttribute="bottom" constant="8" symbolic="YES" id="IId-ZW-zs6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="i3b-3e-n4A" secondAttribute="bottom" constant="173" id="MI0-6z-mMU"/>
+                            <constraint firstItem="sFE-uj-4jF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Mcu-9a-Wcj"/>
+                            <constraint firstItem="5oR-ab-FS0" firstAttribute="trailing" secondItem="srR-Hm-zkK" secondAttribute="trailing" id="YSi-g6-d0K"/>
+                            <constraint firstAttribute="trailing" secondItem="sFE-uj-4jF" secondAttribute="trailing" id="aHI-a0-fgg"/>
+                            <constraint firstItem="5oR-ab-FS0" firstAttribute="leading" secondItem="srR-Hm-zkK" secondAttribute="leading" id="gLD-Wd-6Yg"/>
+                            <constraint firstItem="srR-Hm-zkK" firstAttribute="trailing" secondItem="i3b-3e-n4A" secondAttribute="trailing" id="jh8-Ty-Lty"/>
+                            <constraint firstItem="5oR-ab-FS0" firstAttribute="top" secondItem="sFE-uj-4jF" secondAttribute="bottom" constant="8" symbolic="YES" id="pb8-Bt-L8n"/>
+                            <constraint firstItem="srR-Hm-zkK" firstAttribute="leading" secondItem="i3b-3e-n4A" secondAttribute="leading" id="qVN-fO-GFb"/>
+                            <constraint firstItem="sFE-uj-4jF" firstAttribute="leading" secondItem="5oR-ab-FS0" secondAttribute="leading" id="sEH-Ne-S2K"/>
+                            <constraint firstItem="sFE-uj-4jF" firstAttribute="trailing" secondItem="5oR-ab-FS0" secondAttribute="trailing" id="whU-HW-CZ7"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="map" destination="sFE-uj-4jF" id="rk8-6g-YTt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

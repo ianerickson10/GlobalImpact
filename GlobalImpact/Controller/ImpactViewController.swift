@@ -7,14 +7,23 @@
 //
 
 import UIKit
+import MapKit
 
-class ViewController: UIViewController {
+class ImpactViewController: UIViewController
+{
 
-    override func viewDidLoad() {
+    @IBOutlet weak var map: MKMapView!
+    
+    public override func viewDidLoad()
+    {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    @IBAction func Button(_ sender: UIButton)
+    {
+        let impactLocation
+    }
 
 }
 
